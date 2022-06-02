@@ -1,0 +1,64 @@
+.clients-text {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-net {
+  width: 106px;
+  height: 60px;
+  fill: var(--team-bg-card);
+  @extend %transition;
+  .clients-a:hover & {
+    fill: var(--active-color);
+  }
+  .clients-a:focus & {
+    border-color: var(--active-color);
+    fill: var(--active-color);
+  }
+}
+
+.clients-list + .clients-list {
+  margin-left: 30px;
+}
+
+.client-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--nav-button-color);
+  margin-bottom: 50px;
+}
+
+.clients-a {
+  display: flex;
+  padding: 0px 0px;
+  background: var(--active-color-letters);
+  border: 1px solid var(--team-bg-card);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  @extend %transition;
+
+  &:hover {
+    border-color: var(--active-color);
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-color: var(--active-color);
+  }
+}

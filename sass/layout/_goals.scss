@@ -1,0 +1,43 @@
+.goals {
+    display: flex;
+}
+
+.goals__container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--portfolio-bt-bg);
+}
+
+.text-content {
+    max-width: 270px;
+}
+
+.goals__card:not(:last-child) {
+    margin-right: 30px;
+}
+
+.goals__text {
+    padding-top: 30px;
+}
+
+.text-caption {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: var(--mb-text);
+}
+
+.text-content {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+}

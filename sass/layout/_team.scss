@@ -1,0 +1,86 @@
+.section.team {
+  background-color: var(--team-bg);
+}
+
+.our-team-pic {
+  display: flex;
+  margin-top: 50px;
+  .box:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.section-team .box {
+  background-color: var(--section-team-bg);
+}
+
+.team-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.team-names {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--team-name-color);
+
+  margin-bottom: var(--mb-text);
+}
+
+.box {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--active-color-letters);
+}
+
+.box-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-prof {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.social-network__svg {
+  fill: var(--team-bg-card);
+  @extend %transition;
+}
+
+.social-network {
+  display: flex;
+  justify-content: center;
+}
+
+.social-network__links {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  border-radius: 50%;
+
+  justify-content: center;
+  align-items: center;
+  @extend %transition;
+}
+.social-network__links:hover .social-network__svg,
+.social-network__links:focus .social-network__svg {
+  fill: var(--active-color-letters);
+}
+
+.social-network__items + .social-network__items {
+  margin-left: 10px;
+}

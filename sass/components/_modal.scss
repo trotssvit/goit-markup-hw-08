@@ -1,0 +1,236 @@
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--active-color-letters);
+  border-radius: 4px;
+  padding: 40px 39px 40px 41px;
+}
+
+.modal-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--nav-button-color);
+
+  margin-bottom: 12px;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: black;
+  transition: border-color 250ms;
+  outline: none;
+  @extend %transition;
+  &:focus,
+  &:hover {
+    border: 1px solid var(--active-color);
+  }
+}
+
+.modal-input-text {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: black;
+  transition: border-color 250ms;
+  resize: none;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: var(--active-color);
+  }
+}
+
+.modal-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--address-link-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: border-color 250ms;
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal-input:focus + &,
+  .modal-input:hover + & {
+    fill: var(--active-color);
+  }
+}
+
+.modal-close-bt {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: Solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  top: 8px;
+  right: 8px;
+  transform: fill var(--active-color) 250ms;
+  &:focus,
+  &:hover {
+    fill: var(--active-color);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-text-agreement {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--address-link-color);
+  padding-left: 7px;
+}
+.checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.check-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: solid 2px var(--nav-button-color);
+  border-radius: 4px;
+  @extend %transition;
+
+  &:hover,
+  &:focus + .checkbox-icon {
+    border-color: var(--active-color);
+  }
+  .checkbox:checked + & {
+    background-color: var(--active-color);
+    background-image: url('../images/Vector\ \(1\).svg');
+
+    color: var(--active-color);
+    border-color: var(--active-color);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+
+    background-size: contain;
+  }
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-text-agreement {
+  display: inline;
+  position: absolute;
+}
+
+.modal-checkbox-form {
+  display: flex;
+  justify-content: center;
+}
+
+.agreement-style {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--active-color);
+  margin-left: 4px;
+}
+
+.modal-button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background: var(--active-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-style: normal;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--active-color-letters);
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  @extend %transition;
+
+  &:focus,
+  &:hover {
+    background-color: var(--hero-button-bg);
+  }
+}
