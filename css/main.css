@@ -809,12 +809,10 @@ body {
 }
 
 .list-button {
-  margin-bottom: 50px;
-}
-
-.list.list-button {
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 8px;
 }
 
 .button-portfolio {
@@ -842,14 +840,13 @@ body {
   color: var(--active-color-letters);
 }
 
-.button-item:not(:last-child) {
-  padding-right: 8px;
-}
-
 /* ------------------portfolio content--------------------------------- */
-.profile.list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .profile.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .profile-hover {
@@ -905,8 +902,13 @@ body {
 .profile-box {
   display: block;
   background-color: var(--section-team-bg);
-  margin-right: 30px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .profile-box {
+    max-width: 354px;
+    margin-bottom: -30px;
+  }
 }
 
 .profile-box-title {
