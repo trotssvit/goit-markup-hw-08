@@ -2,25 +2,37 @@
   background-color: var(--team-bg);
 }
 
+.our-team-pic {
+  // display: flex;
+  margin-top: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
 .section-team .box {
   background-color: var(--section-team-bg);
 }
 
 .team-heading {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--title-color);
-  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 
 .team-names {
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
 
   letter-spacing: 0.03em;
   text-align: center;
@@ -34,19 +46,19 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--active-color-letters);
-  width: 100%;
-
-  justify-content: center;
-  align-items: center;
-  // width: 100%;
-  margin-bottom: 30px;
   @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 30px);
-    margin-left: 30px;
+    max-width: 354px;
+    max-height: 536px;
   }
   @media screen and (min-width: 1200px) {
-    width: calc(100% / 4 - 30px);
-    // margin-left: 30px;
+    max-width: 270px;
+    max-height: 428px;
+  }
+}
+.box:not(:last-child) {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 }
 
@@ -57,7 +69,7 @@
 
 .team-prof {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
@@ -90,12 +102,4 @@
 
 .social-network__items + .social-network__items {
   margin-left: 10px;
-}
-.our-team-pic {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  // margin-bottom: -30px;
-  // margin-left: -30px;
 }
