@@ -1,5 +1,17 @@
 /* ---------------------------footer-logo---------------------- */
 /* -------------------------footer address links----------------- */
+// .footer-space {
+//   height: auto;
+// }
+.container-footer {
+  align-items: center;
+}
+.footer-adr {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .address .link {
   list-style: none;
   text-decoration: none;
@@ -10,7 +22,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  padding-left: 0;
+  // padding-left: 0;
 
   @extend %transition;
 }
@@ -24,13 +36,18 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  margin-bottom: 9px;
-  display: block;
+  // margin-bottom: 9px;
+  // display: block;
   @extend %transition;
 }
-
-.address .address-map:not(:last-child) {
-  margin-bottom: 9px;
+.address-map {
+  margin-bottom: 8px;
+}
+// .address .address-map:not(:last-child) {
+//   // margin-bottom: 9px;
+// }
+.address.list {
+  margin-bottom: -8px;
 }
 
 .address .link:hover,
@@ -53,6 +70,12 @@
   letter-spacing: 0.03em;
 
   margin-bottom: 20px;
+  margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    justify-content: center;
+    float: right;
+  }
 }
 .footer-net {
   fill: var(--active-color-letters);
@@ -64,29 +87,39 @@
 
 .footer-links {
   display: flex;
+  justify-content: center;
+
+  margin-bottom: 60px;
 }
 .networks-footer {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    display: block;
+    align-items: baseline;
+    position: inherit;
+    margin-top: 12px;
+  }
 }
 .footer-content {
-  float: left;
-  align-items: baseline;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-
+.address-links {
+  @media screen and (min-width: 768px) {
+    float: left;
+    // align-items: baseline;
+  }
+}
 .social-network__links:hover,
 .social-network__links:focus {
   background-color: var(--active-color);
 }
-.address-links {
-  display: inline-block;
-}
-.address-links {
-  margin-right: 70px;
-}
+// .address-links {
+//   display: inline-block;
+// }
+// .address-links {
+//   margin-right: 70px;
+// }
 /* ----------------------------mailing----------------------------------- */
 .mailing-text {
   font-style: normal;
@@ -97,26 +130,29 @@
   text-transform: uppercase;
 
   color: var(--active-color-letters);
+  text-align: center;
   margin-bottom: 20px;
 }
-.input-email {
-  width: 358px;
-  height: 50px;
-  padding: 0;
-  border: 0;
-  border-radius: 4px;
-  padding-left: 16px;
-  font: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: var(--footer-bg-color);
-  color: var(--active-color-letters);
-}
+// .input-email {
+//   width: 100%;
+//   // width: 358px;
+//   height: 50px;
+//   padding: 0;
+//   border: 0;
+//   border-radius: 4px;
+//   // padding-left: 16px;
+//   font: inherit;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   background-color: var(--footer-bg-color);
+//   color: var(--active-color-letters);
+// }
 .form-field {
+  width: 100%;
   position: relative;
-  margin-right: 12px;
-
-  display: inline-block;
-  align-items: baseline;
+  // margin-right: 12px;
+  // display: block;
+  // display: inline-block;
+  // align-items: baseline;
 }
 .email {
   font-style: normal;
@@ -135,20 +171,24 @@
   @extend %transition;
 }
 
-.mailing {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
-}
+// .mailing {
+//   display: inline-block;
+//   align-items: baseline;
+//   position: inherit;
+//   margin-top: 12px;
+// }
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
 }
+// .form {
+//   display: block;
+// }
 .button-submit {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 
-  position: absolute;
+  // position: absolute;
   width: 200px;
   height: 50px;
   border: 0;
@@ -167,16 +207,20 @@
   letter-spacing: 0.06em;
 
   color: var(--active-color-letters);
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
+  // align-items: center;
+  // justify-content: center;
+  // padding: 0px;
 
   @extend %transition;
   cursor: pointer;
 }
+.button-footer {
+  display: flex;
+  justify-content: center;
+}
 .icon-submit {
   fill: var(--active-color-letters);
-  margin-left: 10px;
+  // margin-left: 10px;
 
   @extend %transition;
   &:hover,
@@ -193,11 +237,12 @@
   text-transform: uppercase;
 
   color: var(--active-color-letters);
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 
 .input-email {
-  width: 358px;
+  width: 100%;
+  // width: 358px;
   height: 50px;
   padding: 0;
   border: 0;
@@ -210,36 +255,37 @@
 }
 
 .form-field {
-  position: relative;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  // position: relative;
+  // margin-right: 12px;
 
-  display: inline-block;
-  align-items: baseline;
+  // display: inline-block;
+  // align-items: baseline;
 }
 
-.email {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+// .email {
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
 
-  color: rgba(255, 255, 255, 0.6);
+//   color: rgba(255, 255, 255, 0.6);
 
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
+//   position: absolute;
+//   top: 50%;
+//   left: 16px;
+//   transform: translateY(-50%);
 
-  @extend %transition;
-}
+//   @extend %transition;
+// }
 
-.mailing {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
-}
+// .mailing {
+//   display: inline-block;
+//   align-items: baseline;
+//   position: inherit;
+//   margin-top: 12px;
+// }
 
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
@@ -247,9 +293,9 @@
 }
 
 .button-submit {
-  display: inline-flex;
+  // display: inline-flex;
 
-  position: absolute;
+  // position: absolute;
   width: 200px;
   height: 50px;
   border: 0;
@@ -268,9 +314,9 @@
   letter-spacing: 0.06em;
 
   color: var(--active-color-letters);
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
+  // align-items: center;
+  // justify-content: center;
+  // padding: 0px;
 
   @extend %transition;
   cursor: pointer;
@@ -283,7 +329,7 @@
 
 .icon-submit {
   fill: var(--active-color-letters);
-  margin-left: 10px;
+  // margin-left: 10px;
 
   @extend %transition;
 }

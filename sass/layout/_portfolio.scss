@@ -1,11 +1,7 @@
 .list-button {
-  // margin-bottom: -15px;
-  // margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px 8px;
-  // padding-bottom: 15px;
-  // justify-content: left;
   @media screen and (min-width: 480px) {
     margin-top: 60px;
     margin-bottom: 40px;
@@ -67,11 +63,11 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
   }
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
 
+  margin-bottom: 60px;
+}
 .profile-hover {
   position: absolute;
   font-size: 18px;
@@ -137,7 +133,7 @@
   display: block;
   background-color: var(--section-team-bg);
   // margin-right: 30px;
-  // margin-bottom: 30px;
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) {
     max-width: calc(100% / 2 - 30px);
     margin-right: 30px;

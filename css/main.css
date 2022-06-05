@@ -38,8 +38,10 @@ body {
 }
 
 /*-------------------------- footer styles ---------------------*/
-.footer-space .container {
-  display: flex;
+@media screen and (min-width: 480px) {
+  .footer-space .container {
+    display: block;
+  }
 }
 
 .footer-space {
@@ -58,6 +60,25 @@ body {
 @media screen and (min-width: 768px) {
   .section {
     padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio.section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio.section {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio.section {
+    padding-top: 50px;
     padding-bottom: 94px;
   }
 }
@@ -162,6 +183,17 @@ body {
 
 /* ---------------------------footer-logo---------------------- */
 /* -------------------------footer address links----------------- */
+.container-footer {
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-adr {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .address .link {
   list-style: none;
   text-decoration: none;
@@ -171,7 +203,6 @@ body {
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  padding-left: 0;
 }
 
 .address-link {
@@ -182,12 +213,14 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-bottom: 9px;
-  display: block;
 }
 
-.address .address-map:not(:last-child) {
-  margin-bottom: 9px;
+.address-map {
+  margin-bottom: 8px;
+}
+
+.address.list {
+  margin-bottom: -8px;
 }
 
 .address .link:hover,
@@ -208,6 +241,14 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-link-word {
+    margin-top: 0;
+    justify-content: center;
+    float: right;
+  }
 }
 
 .footer-net {
@@ -220,32 +261,34 @@ body {
 
 .footer-links {
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
-.networks-footer {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .networks-footer {
+    display: block;
+    align-items: baseline;
+    position: inherit;
+    margin-top: 12px;
+  }
 }
 
 .footer-content {
-  float: left;
-  align-items: baseline;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .address-links {
+    float: left;
+  }
 }
 
 .social-network__links:hover,
 .social-network__links:focus {
   background-color: var(--active-color);
-}
-
-.address-links {
-  display: inline-block;
-}
-
-.address-links {
-  margin-right: 70px;
 }
 
 /* ----------------------------mailing----------------------------------- */
@@ -257,27 +300,13 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--active-color-letters);
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.input-email {
-  width: 358px;
-  height: 50px;
-  padding: 0;
-  border: 0;
-  border-radius: 4px;
-  padding-left: 16px;
-  font: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: var(--footer-bg-color);
-  color: var(--active-color-letters);
-}
-
 .form-field {
+  width: 100%;
   position: relative;
-  margin-right: 12px;
-  display: inline-block;
-  align-items: baseline;
 }
 
 .email {
@@ -293,21 +322,14 @@ body {
   transform: translateY(-50%);
 }
 
-.mailing {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
-}
-
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
 }
 
 .button-submit {
-  display: inline-flex;
-  position: absolute;
+  display: flex;
+  justify-content: center;
   width: 200px;
   height: 50px;
   border: 0;
@@ -322,15 +344,16 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--active-color-letters);
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
   cursor: pointer;
+}
+
+.button-footer {
+  display: flex;
+  justify-content: center;
 }
 
 .icon-submit {
   fill: var(--active-color-letters);
-  margin-left: 10px;
 }
 .icon-submit:hover, .icon-submit:focus {
   background-color: var(--hero-button-bg);
@@ -344,11 +367,10 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--active-color-letters);
-  margin-bottom: 20px;
 }
 
 .input-email {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 0;
   border: 0;
@@ -361,30 +383,7 @@ body {
 }
 
 .form-field {
-  position: relative;
-  margin-right: 12px;
-  display: inline-block;
-  align-items: baseline;
-}
-
-.email {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-}
-
-.mailing {
-  display: inline-block;
-  align-items: baseline;
-  position: inherit;
-  margin-top: 12px;
+  margin-bottom: 20px;
 }
 
 .input-email:focus + .email,
@@ -393,8 +392,6 @@ body {
 }
 
 .button-submit {
-  display: inline-flex;
-  position: absolute;
   width: 200px;
   height: 50px;
   border: 0;
@@ -409,9 +406,6 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--active-color-letters);
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
   cursor: pointer;
 }
 .button-submit:hover, .button-submit:focus {
@@ -420,7 +414,6 @@ body {
 
 .icon-submit {
   fill: var(--active-color-letters);
-  margin-left: 10px;
 }
 
 .header {
@@ -862,13 +855,13 @@ body {
 
 /* ------------------portfolio content--------------------------------- */
 .profile.list {
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .profile.list {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
   }
 }
 
@@ -921,6 +914,7 @@ body {
 .profile-box {
   display: block;
   background-color: var(--section-team-bg);
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1044,6 +1038,10 @@ body {
   display: inline-block;
   padding-left: 0;
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 .logo__light span {
   color: var(--logo-footer-color);
