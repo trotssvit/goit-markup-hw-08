@@ -653,6 +653,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .mob-tab-hidden {
+    display: none;
+  }
+}
+
 .work-text {
   font-weight: 700;
   font-size: 36px;
