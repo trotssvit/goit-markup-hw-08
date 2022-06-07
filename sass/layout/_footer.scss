@@ -1,7 +1,8 @@
 /* ---------------------------footer-logo---------------------- */
 /* -------------------------footer address links----------------- */
 // .footer-space {
-//   height: auto;
+//   margin-top: 60px;
+//   margin-bottom: 60px;
 // }
 .container-footer {
   align-items: center;
@@ -14,9 +15,12 @@
     text-align: start;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+   
   }
 }
 .footer-adr {
+  display: inline;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -24,10 +28,10 @@
     justify-content: space-around;
   }
   @media screen and (min-width: 1200px) {
-    align-items: baseline;
-    // text-align: start;
-    // display: flex;
-    // flex-direction: row;
+    // align-items: baseline;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
   }
 }
 .address .link {
@@ -58,14 +62,14 @@
   // display: block;
   @extend %transition;
 }
-.address-map {
+.address-map:not(:last-child){
   margin-bottom: 8px;
 }
 // .address .address-map:not(:last-child) {
 //   // margin-bottom: 9px;
 // }
 .address.list {
-  margin-bottom: -8px;
+  margin-bottom: 0;
 }
 
 .address .link:hover,
@@ -88,7 +92,7 @@
   letter-spacing: 0.03em;
 
   margin-bottom: 20px;
-  margin-top: 60px;
+  // margin-top: 60px;
   @media screen and (min-width: 768px) {
     margin-top: 0;
     justify-content: center;
@@ -126,6 +130,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
 }
 .address-links {
   @media screen and (min-width: 768px) {
@@ -163,6 +168,8 @@
   margin-bottom: 20px;
   @media screen and (min-width: 1200px) {
     margin-bottom: 20px;
+    text-align:left;
+    margin-top: 12px;
   }
 }
 .input-email {
@@ -222,25 +229,25 @@
   @extend %transition;
 }
 
-.mailing {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  @media screen and (min-width: 1200px) {
-    display: block;
-    text-align: start;
-    // align-items: flex-start;
-    // align-items: baseline;
-    // position: inherit;
-    // margin-bottom: 20px;
-  }
-  // display: inline-block;
-  // align-items: baseline;
-  // position: inherit;
-  // margin-top: 12px;
-}
+// .mailing {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     display: block;
+//     text-align: start;
+//     // align-items: flex-start;
+//     // align-items: baseline;
+//     // position: inherit;
+//     // margin-bottom: 20px;
+//   }
+//   // display: inline-block;
+//   // align-items: baseline;
+//   // position: inherit;
+//   // margin-top: 12px;
+// }
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
@@ -286,7 +293,7 @@
 }
 .icon-submit {
   fill: var(--active-color-letters);
-  // margin-left: 10px;
+  margin-left: 10px;
 
   @extend %transition;
   &:hover,
@@ -396,9 +403,9 @@
   &:focus {
     background-color: var(--hero-button-bg);
   }
-  @media screen and (min-width: 1200px) {
-    display: inline-block;
-  }
+  // @media screen and (min-width: 1200px) {
+  //   display: inline-block;
+  // }
 }
 
 .icon-submit {
