@@ -627,29 +627,49 @@ body {
 }
 
 .hero-content {
+  padding: 118px 60px;
   background-color: var(--hero-bg-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroBG-pic.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), url(../images/heroBG-pic.jpg));
   background-repeat: no-repeat;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+@media screen and (min-width: 786px) {
+  .hero-content {
+    padding: 118px 204px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero-content__heading {
   color: var(--hero-heading-color);
   text-align: center;
-  line-height: 1.36;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
-  width: 696px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-content__heading {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }
 
 .goals {
