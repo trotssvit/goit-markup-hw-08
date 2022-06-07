@@ -229,10 +229,12 @@
     text-align: center;
   }
   @media screen and (min-width: 1200px) {
-    display: inline-block;
-    align-items: baseline;
-    position: inherit;
-    margin-bottom: 20px;
+    display: block;
+    text-align: start;
+    // align-items: flex-start;
+    // align-items: baseline;
+    // position: inherit;
+    // margin-bottom: 20px;
   }
   // display: inline-block;
   // align-items: baseline;
@@ -243,9 +245,11 @@
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
 }
-// .form {
-//   display: block;
-// }
+.form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
 .button-submit {
   display: flex;
   justify-content: center;
@@ -394,7 +398,6 @@
   }
   @media screen and (min-width: 1200px) {
     display: inline-block;
-    margin-left: 12px;
   }
 }
 
