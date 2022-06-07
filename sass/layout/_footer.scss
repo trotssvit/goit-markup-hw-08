@@ -5,11 +5,29 @@
 // }
 .container-footer {
   align-items: center;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    // display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+  }
 }
 .footer-adr {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: row;
+    align-items: baseline;
     justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    // text-align: start;
+    // display: flex;
+    // flex-direction: row;
   }
 }
 .address .link {
@@ -76,6 +94,9 @@
     justify-content: center;
     float: right;
   }
+  @media screen and (min-width: 1200px) {
+    // display: block;
+  }
 }
 .footer-net {
   fill: var(--active-color-letters);
@@ -93,10 +114,12 @@
 }
 .networks-footer {
   @media screen and (min-width: 768px) {
-    display: block;
-    align-items: baseline;
-    position: inherit;
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
 }
 .footer-content {
@@ -106,8 +129,14 @@
 }
 .address-links {
   @media screen and (min-width: 768px) {
-    float: left;
+    margin-bottom: 60px;
     // align-items: baseline;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    // display: flex;
+    flex-direction: row;
+    margin-right: 70px;
   }
 }
 .social-network__links:hover,
@@ -132,28 +161,50 @@
   color: var(--active-color-letters);
   text-align: center;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
-// .input-email {
-//   width: 100%;
-//   // width: 358px;
-//   height: 50px;
-//   padding: 0;
-//   border: 0;
-//   border-radius: 4px;
-//   // padding-left: 16px;
-//   font: inherit;
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   background-color: var(--footer-bg-color);
-//   color: var(--active-color-letters);
-// }
-.form-field {
-  width: 100%;
+.input-email {
   position: relative;
-  // margin-right: 12px;
-  // display: block;
-  // display: inline-block;
-  // align-items: baseline;
+  @media screen and (min-width: 768px) {
+    // display: flex;
+    // justify-content: center;
+    // position: relative;
+    // flex-direction: column;
+    // text-align: center;
+    max-width: 450px;
+    // margin-bottom: 20px;
+  }
+
+  // width: 100%;
+  // // width: 358px;
+  // height: 50px;
+  // padding: 0;
+  // border: 0;
+  // border-radius: 4px;
+  // // padding-left: 16px;
+  // font: inherit;
+  // border: 1px solid rgba(255, 255, 255, 0.3);
+  // background-color: var(--footer-bg-color);
+  // color: var(--active-color-letters);
 }
+// .form-field {
+//   // position: relative;
+//   // @media screen and (min-width: 768px) {
+//   //   justify-content: center;
+//   // }
+//   // width: 100%;
+//   // position: relative;
+//   // @media screen and (min-width: 768px) {
+//   // display: inline-block;
+//   // max-width: 450px;
+
+//   // margin-right: 12px;
+//   // display: block;
+
+//   // align-items: baseline;
+// }
 .email {
   font-style: normal;
   font-weight: 400;
@@ -171,12 +222,23 @@
   @extend %transition;
 }
 
-// .mailing {
-//   display: inline-block;
-//   align-items: baseline;
-//   position: inherit;
-//   margin-top: 12px;
-// }
+.mailing {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    align-items: baseline;
+    position: inherit;
+    margin-bottom: 20px;
+  }
+  // display: inline-block;
+  // align-items: baseline;
+  // position: inherit;
+  // margin-top: 12px;
+}
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
@@ -252,15 +314,20 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: var(--footer-bg-color);
   color: var(--active-color-letters);
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .form-field {
   margin-bottom: 20px;
-  // position: relative;
-  // margin-right: 12px;
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    margin-right: 12px;
 
-  // display: inline-block;
-  // align-items: baseline;
+    display: inline-block;
+    align-items: baseline;
+  }
 }
 
 // .email {
@@ -324,6 +391,10 @@
   &:hover,
   &:focus {
     background-color: var(--hero-button-bg);
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    margin-left: 12px;
   }
 }
 
