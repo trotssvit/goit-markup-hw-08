@@ -8,10 +8,13 @@
 
 .site-nav {
   display: none;
-  // @media screen and (max-width: 1200px) {
-  //   display: flex;
-  //   padding-left: 93px;
-  // }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-left: 93px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 93px;
+  }
 }
 
 .site-nav__item {
@@ -99,7 +102,13 @@
 
 .contacts.list {
   display: none;
-  // display: inline-flex;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+  }
 }
 
 .contacts-link {
@@ -123,6 +132,10 @@
   &:focus {
     color: var(--active-color);
   }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
 }
 
 .contacts {
@@ -138,6 +151,9 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   .container {
     display: flex;
     flex-direction: column;
@@ -168,7 +184,9 @@
   color: #757575;
 }
 .contacts-mail {
-  margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 .menu-mob-btn-open,
 .menu-mob-btn-close {
@@ -183,6 +201,14 @@
   border: none;
   background-color: #fff;
   cursor: pointer;
+  @extend %transition;
+  &:focus,
+  &:hover {
+    fill: var(--active-color);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .mob-site-nav__item {
   margin-bottom: 32px;
@@ -223,4 +249,8 @@
 }
 .no-scroll {
   overflow: hidden;
+}
+.mob-menu:hover,
+.mob-menu:focus {
+  fill: #2196f3;
 }

@@ -12,11 +12,16 @@
 
 .modal {
   position: relative;
-  width: 528px;
-  min-height: 581px;
+
+  max-width: 450px;
+  max-height: auto;
   background-color: var(--active-color-letters);
   border-radius: 4px;
   padding: 40px 39px 40px 41px;
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: auto;
+  }
 }
 
 .modal-header {

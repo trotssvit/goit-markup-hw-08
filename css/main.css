@@ -488,6 +488,17 @@ body {
 .site-nav {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    padding-left: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    padding-left: 93px;
+  }
+}
 
 .site-nav__item {
   display: block;
@@ -564,6 +575,16 @@ body {
 .contacts.list {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .contacts.list {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts.list {
+    display: inline-flex;
+  }
+}
 
 .contacts-link {
   color: var(--contacts-link-color);
@@ -582,6 +603,12 @@ body {
 .contacts-link:hover, .contacts-link:focus {
   color: var(--active-color);
 }
+@media screen and (min-width: 768px) {
+  .contacts-link {
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+}
 
 .contacts {
   margin-left: auto;
@@ -597,6 +624,8 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-mobile .container {
   display: flex;
@@ -627,8 +656,10 @@ body {
   color: #757575;
 }
 
-.contacts-mail {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts-mail {
+    margin-right: 50px;
+  }
 }
 
 .menu-mob-btn-open,
@@ -643,6 +674,17 @@ body {
   border: none;
   background-color: #fff;
   cursor: pointer;
+}
+.menu-mob-btn-open:focus, .menu-mob-btn-open:hover,
+.menu-mob-btn-close:focus,
+.menu-mob-btn-close:hover {
+  fill: var(--active-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-mob-btn-open,
+.menu-mob-btn-close {
+    display: none;
+  }
 }
 
 .mob-site-nav__item {
@@ -688,6 +730,11 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.mob-menu:hover,
+.mob-menu:focus {
+  fill: #2196f3;
 }
 
 .hero-content {
@@ -1190,7 +1237,8 @@ body {
   --portfolio-title-text: #eeeeee;
 }
 
-.modal-button, .checkbox-icon, .modal-input, .clients-net, .clients-a, .address .link, .address-link, .email, .button-submit, .icon-submit, .site-nav__link, .mail-icon, .tel-icon, .contacts-link, .social-network__svg, .social-network__links, .button-portfolio, .card-overlay, .profile-card {
+.modal-button, .checkbox-icon, .modal-input, .clients-net, .clients-a, .address .link, .address-link, .email, .button-submit, .icon-submit, .site-nav__link, .mail-icon, .tel-icon, .contacts-link, .menu-mob-btn-open,
+.menu-mob-btn-close, .social-network__svg, .social-network__links, .button-portfolio, .card-overlay, .profile-card {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1274,11 +1322,17 @@ body {
 
 .modal {
   position: relative;
-  width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  max-height: auto;
   background-color: var(--active-color-letters);
   border-radius: 4px;
   padding: 40px 39px 40px 41px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: auto;
+  }
 }
 
 .modal-header {
