@@ -7,7 +7,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(./images/heroBG-pic-mob-1x.jpg);
+    url(../images/heroBG-pic-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -48,7 +48,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(./images/heroBG-pic.jpg);
+      url(/images/heroBG-pic.jpg);
     background-repeat: no-repeat;
 
     margin-left: auto;
@@ -60,7 +60,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(./images/heroBG-pic_2x.jpg);
+        url(/images/heroBG-pic_2x.jpg);
     }
   }
 }
