@@ -27,10 +27,10 @@
       <nav class="page-nav">
         <ul class="site-nav list">
           <li class="site-nav__item">
-            <a href="" class="site-nav__link current">Студия</a>
+            <a href="/index.html" class="site-nav__link current">Студия</a>
           </li>
           <li class="site-nav__item">
-            <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+            <a href="/portfolio.html" class="site-nav__link ">Портфолио</a>
           </li>
           <li class="site-nav__item">
             <a href="" class="site-nav__link">Контакты</a>
@@ -205,157 +205,184 @@
         <h2 class="team-heading">Наша команда</h2>
         <ul class="our-team-pic list">
           <li class="box">
-            <img srcset="./images/pers1.jpg 1x,
-         /images/pers1-2x.jpg 2x" src="./images/pers1.jpg" alt="Игорь Демьяненко" />
-            <div class="box-text">
-              <h3 class="team-names">Игорь Демьяненко</h3>
-              <p lang="en" class="team-prof">Product Designer</p>
-              <ul class="social-network list">
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twit"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <picture>
+              <source srcset="./images/pers1.jpg 1x,
+         /images/pers1-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/pers1-tab-1x.jpg 1x,
+                 ./images/pers1-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/pers1-mob-1x.jpg 1x,
+                                 ./images/pers1-mob-2x.jpg 2x" media="(min-width:480px)" />
+              <img src="./images/pers1.jpg" alt="Игорь Демьяненко">
+              <div class="box-text">
+                <h3 class="team-names">Игорь Демьяненко</h3>
+                <p lang="en" class="team-prof">Product Designer</p>
+                <ul class="social-network list">
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-twit"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </picture>
           </li>
           <li class="box">
-            <img srcset="./images/pers2.jpg 1x, 
-        /images/pers2-2x.jpg 2x" src="./images/pers2.jpg" alt="Ольга Репина" />
-            <div class="box-text">
-              <h3 class="team-names">Ольга Репина</h3>
-              <p lang="en" class="team-prof">Frontend Developer</p>
-              <ul class="social-network list">
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twit"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <picture>
+              <source srcset="./images/pers2.jpg 1x,
+                     /images/pers2-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/pers2-tab-1x.jpg 1x,
+                             ./images/pers2-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/pers2-mob-1x.jpg 1x,
+                                             ./images/pers2-mob-2x.jpg 2x" media="(min-width:480px)" />
+              <img src="./images/pers2.jpg" alt="Ольга Репина" />
+              <div class="box-text">
+                <h3 class="team-names">Ольга Репина</h3>
+                <p lang="en" class="team-prof">Frontend Developer</p>
+                <ul class="social-network list">
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-twit"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </li>
           <li class="box">
-            <img srcset="./images/pers3.jpg 1x, 
+            <picture>
+              <source srcset="./images/pers3.jpg 1x,
+                     /images/pers3-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/pers3-tab-1x.jpg 1x,
+                             ./images/pers3-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/pers3-mob-1x.jpg 1x,
+                                             ./images/pers3-mob-2x.jpg 2x" media="(min-width:480px)" />
+              <img srcset="./images/pers3.jpg 1x, 
         /images/pers3-2x.jpg 2x" src="./images/pers3.jpg" alt="Николай Тарасов" />
-            <div class="box-text">
-              <h3 class="team-names">Николай Тарасов</h3>
-              <p lang="en" class="team-prof">Marketing</p>
-              <ul class="social-network list">
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twit"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <div class="box-text">
+                <h3 class="team-names">Николай Тарасов</h3>
+                <p lang="en" class="team-prof">Marketing</p>
+                <ul class="social-network list">
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-twit"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </li>
 
           <li class="box">
-            <img srcset="/images/pers4.jpg 1x,
+            <picture>
+              <source srcset="./images/pers4.jpg 1x,
+                     /images/pers4-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="./images/pers4-tab-1x.jpg 1x,
+                             ./images/pers4-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="./images/pers4-mob-1x.jpg 1x,
+                                             ./images/pers4-mob-2x.jpg 2x" media="(min-width:480px)" />
+              <img srcset="/images/pers4.jpg 1x,
          /images/pers4-2x.jpg 2x" src="./images/pers4.jpg" alt="Михаил Ермаков" />
-            <div class="box-text">
-              <h3 class="team-names">Михаил Ермаков</h3>
-              <p lang="en" class="team-prof">UI Designer</p>
-              <ul class="social-network list">
-                <li class="social-network__items social-network__items--light">
-                  <a href="" class="social-network__links social-network__links--light">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-twit"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-network__items">
-                  <a href="" class="social-network__links">
-                    <svg class="social-network__svg" width="20" height="20">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <div class="box-text">
+                <h3 class="team-names">Михаил Ермаков</h3>
+                <p lang="en" class="team-prof">UI Designer</p>
+                <ul class="social-network list">
+                  <li class="social-network__items social-network__items--light">
+                    <a href="" class="social-network__links social-network__links--light">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-twit"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-network__items">
+                    <a href="" class="social-network__links">
+                      <svg class="social-network__svg" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </li>
         </ul>
       </div>

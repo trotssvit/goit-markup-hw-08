@@ -954,7 +954,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    width: 100%;
   }
 }
 
@@ -1245,7 +1244,6 @@ body {
 }
 
 .container {
-  width: 100%;
   height: auto;
   margin: auto;
   padding-left: 15px;
