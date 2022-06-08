@@ -686,6 +686,10 @@ body {
   display: flex;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .hero-content {
   padding: 118px 10px;
   background-color: var(--hero-bg-color);

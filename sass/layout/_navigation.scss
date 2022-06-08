@@ -221,6 +221,6 @@
 .soc-list {
   display: flex;
 }
-// .mob-nav {
-//   display: flex;
-// }
+.no-scroll {
+  overflow: hidden;
+}
