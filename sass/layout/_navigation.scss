@@ -10,7 +10,7 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
-    padding-left: 93px;
+    padding-left: 88px;
   }
   @media screen and (min-width: 1200px) {
     padding-left: 93px;
@@ -44,6 +44,9 @@
   .contacts-mail:focus & {
     fill: var(--active-color);
   }
+  @media screen and (min-width: 768px){
+
+  } 
 }
 
 .tel-icon {
@@ -133,8 +136,17 @@
     color: var(--active-color);
   }
   @media screen and (min-width: 768px) {
+    font-weight: 500;
+font-size: 12px;
+line-height: 1.17;
     padding-bottom: 10px;
     padding-top: 0;
+  }
+  @media screen and (min-width: 1200px){
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+  
   }
 }
 

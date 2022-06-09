@@ -1,22 +1,17 @@
 /* ---------------------------footer-logo---------------------- */
 /* -------------------------footer address links----------------- */
-// .footer-space {
-//   margin-top: 60px;
-//   margin-bottom: 60px;
-// }
 .container-footer {
-  align-items: center;
+  width: 100%;
   @media screen and (min-width: 768px) {
-    text-align: center;
-    // display: flex;
-    flex-direction: column;
-  }
-  @media screen and (min-width: 1200px) {
     text-align: start;
-    display: flex;
+    display: block;
     flex-direction: row;
     align-items: flex-start;
    
+  }
+  @media screen and (min-width: 1200px){
+    display: flex;
+    align-items: baseline;
   }
 }
 .footer-adr {
@@ -24,7 +19,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: space-around;
   }
   @media screen and (min-width: 1200px) {
@@ -32,6 +27,7 @@
     text-align: start;
     display: flex;
     flex-direction: row;
+    align-items: baseline;
   }
 }
 .address .link {
@@ -100,6 +96,7 @@
   }
   @media screen and (min-width: 1200px) {
     // display: block;
+    // justify-content: left;
   }
 }
 .footer-net {
@@ -117,6 +114,8 @@
   margin-bottom: 60px;
 }
 .networks-footer {
+  
+  text-align: center;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -124,6 +123,8 @@
   }
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
+    text-align: left;
+  
   }
 }
 .footer-content {
@@ -135,6 +136,7 @@
 .address-links {
   @media screen and (min-width: 768px) {
     margin-bottom: 60px;
+    margin-right: 165px;
     // align-items: baseline;
   }
   @media screen and (min-width: 1200px) {
@@ -142,6 +144,7 @@
     // display: flex;
     flex-direction: row;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 .social-network__links:hover,
@@ -169,20 +172,9 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 20px;
     text-align:left;
-    margin-top: 12px;
+    
   }
 }
-.input-email {
-  position: relative;
-  @media screen and (min-width: 768px) {
-    // display: flex;
-    // justify-content: center;
-    // position: relative;
-    // flex-direction: column;
-    // text-align: center;
-    max-width: 450px;
-    // margin-bottom: 20px;
-  }
 
   // width: 100%;
   // // width: 358px;
@@ -195,7 +187,7 @@
   // border: 1px solid rgba(255, 255, 255, 0.3);
   // background-color: var(--footer-bg-color);
   // color: var(--active-color-letters);
-}
+
 // .form-field {
 //   // position: relative;
 //   // @media screen and (min-width: 768px) {
@@ -229,25 +221,25 @@
   @extend %transition;
 }
 
-// .mailing {
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     flex-direction: column;
-//     text-align: center;
-//   }
-//   @media screen and (min-width: 1200px) {
-//     display: block;
-//     text-align: start;
-//     // align-items: flex-start;
-//     // align-items: baseline;
-//     // position: inherit;
-//     // margin-bottom: 20px;
-//   }
-//   // display: inline-block;
-//   // align-items: baseline;
-//   // position: inherit;
-//   // margin-top: 12px;
-// }
+.mailing {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    text-align: start;
+    // align-items: flex-start;
+    // align-items: baseline;
+    // position: inherit;
+    // margin-bottom: 20px;
+  }
+  // display: inline-block;
+  // align-items: baseline;
+  // position: inherit;
+  // margin-top: 12px;
+}
 .input-email:focus + .email,
 .input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
@@ -318,20 +310,38 @@
   // width: 358px;
   height: 50px;
   padding: 0;
-  border: 0;
+  position: relative;
   border-radius: 4px;
   padding-left: 16px;
   font: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: var(--footer-bg-color);
   color: var(--active-color-letters);
+  @media screen and (min-width: 768px) {
+    max-width: 450px;}
+
   @media screen and (min-width: 1200px) {
     width: 358px;
+    height: 50px;
   }
 }
+// .input-email {
+  
+//   @media screen and (min-width: 768px) {
+//     max-width: 450px;
+//     @media screen and (min-width: 1200px){
+//       width: 358px;
+      
+//     }
+//   }
 
 .form-field {
   margin-bottom: 20px;
+  
+  @media screen and (min-width: 768px){
+    display: flex;
+    justify-content: center;
+  }
   @media screen and (min-width: 1200px) {
     position: relative;
     margin-right: 12px;

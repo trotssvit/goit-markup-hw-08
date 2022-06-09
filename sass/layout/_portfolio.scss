@@ -3,17 +3,17 @@
   flex-wrap: wrap;
   gap: 15px 8px;
   @media screen and (min-width: 480px) {
-    margin-top: 60px;
+    
     margin-bottom: 40px;
     justify-content: left;
   }
   @media screen and (min-width: 768px) {
-    margin-top: 50px;
+   
     margin-bottom: 30px;
     justify-content: center;
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 60px;
+    
     margin-bottom: 50px;
     justify-content: center;
   }
@@ -64,9 +64,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
+    margin-bottom: -30px;
   }
 
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 .profile-hover {
   position: absolute;
